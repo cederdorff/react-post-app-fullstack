@@ -1,19 +1,25 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Nav from "./components/Nav";
-import CreatePage from "./pages/CreatePage";
-import UpdatePage from "./pages/UpdatePage";
+import logo from './logo.svg';
+import './App.css';
 
-export default function App() {
-    return (
-        <main>
-            <Nav />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/create" element={<CreatePage />} />
-                <Route path="/posts/:postId" element={<UpdatePage />} />
-                <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-        </main>
-    );
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
+
+export default App;
